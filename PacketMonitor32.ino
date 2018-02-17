@@ -21,12 +21,12 @@ using namespace std;
 #define MAX_CH 14       // 1 - 14 channels (1-11 for US, 1-13 for EU and 1-14 for Japan)
 #define SNAP_LEN 2324   // max len of each recieved packet
 
-#define BUTTON_PIN 5    // button to change the channel
+#define BUTTON_PIN 0    // button to change the channel
 
 #define USE_DISPLAY     // comment out if you don't want to use the OLED display
 #define FLIP_DISPLAY    // comment out if you don't like to flip it
-#define SDA_PIN 26
-#define SCL_PIN 27
+#define SDA_PIN 4
+#define SCL_PIN 15
 #define MAX_X 128
 #define MAX_Y 51
 
@@ -37,7 +37,7 @@ using namespace std;
 #endif
 
 #ifdef USE_DISPLAY
-#include "SH1106.h"
+#include "SSD1306.h"
 #endif
 
 #include "FS.h"
@@ -51,7 +51,7 @@ esp_err_t event_handler(void* ctx, system_event_t* event) {
 /* ===== run-time variables ===== */
 Buffer sdBuffer;
 #ifdef USE_DISPLAY
-SH1106 display(0x3c, SDA_PIN, SCL_PIN);
+SSD1306 display(0x3c, SDA_PIN, SCL_PIN);
 #endif
 Preferences preferences;
 
@@ -209,6 +209,11 @@ void setup() {
 
   // display
 #ifdef USE_DISPLAY
+  // The Heltech Lora esp32 module needs GPIO16 to stay high for the OLED to function
+  pinMode(16,OUTPUT);
+  digitalWrite(16, LOW); // set GPIO16 low to reset OLED
+  delay(50);
+  digitalWrite(16, HIGH); // while OLED is running, must set GPIO16 to high
   display.init();
 #ifdef FLIP_DISPLAY
   display.flipScreenVertically();
