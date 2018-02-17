@@ -13,7 +13,7 @@ It shows you the traffic of all nearby devices on the selected WiFi channel.
 - shows average RSSI
 
 ## Board Available on
-**[AliExpress](https://www.aliexpress.com/item/2PCS-868MHz-915MHz-SX1276-ESP32-LoRa-0-96-Inch-Blue-OLED-Display-Bluetooth-WIFI-Lora-Kit/32836576437.html)**  
+**[AliExpress](https://www.aliexpress.com/item/868MHz-915MHz-SX1276-ESP32-LoRa-0-96-Inch-Blue-OLED-Display-Bluetooth-WIFI-Lora-Kit-32/32836591865.html)**  
 
 ## Video
 [![PacketMonitor32 Video](https://img.youtube.com/vi/7WYakpagPXk/0.jpg)](https://www.youtube.com/watch?v=7WYakpagPXk)

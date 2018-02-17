@@ -222,10 +222,12 @@ void setup() {
   /* show start screen */
   display.clear();
   display.setFont(ArialMT_Plain_16);
-  display.drawString(6, 6, "PacketMonitor32");
+  display.drawString(6, 4, "PacketMonitor32");
   display.setFont(ArialMT_Plain_10);
-  display.drawString(24, 34, "Made with <3 by");
-  display.drawString(29, 44, "@Spacehuhn");
+  display.drawString(24, 20, "(Heltec LoRa 32)");
+  display.drawString(24, 32, "Made with <3 by");
+  display.drawString(29, 42, "@Spacehuhn");
+  display.drawString(29, 52, "& @ensingm2");
   display.display();
 
   delay(1000);
