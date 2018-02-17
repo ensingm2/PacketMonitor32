@@ -1,31 +1,31 @@
 # PacketMonitor32
 ESP32 Packet Monitor + SD card!
 
-![PacketMonitor32 Board](https://raw.githubusercontent.com/spacehuhn/PacketMonitor32/master/images/1.jpg)
+![PacketMonitor32 Board](https://raw.githubusercontent.com/ensingm2/PacketMonitor32-Heltec_WIFI_LoRa_32/master/images/1.jpg)
 
-This is an enhanced version for the ESP32 of my previous [ESP8266 PacketMonitor](https://github.com/spacehuhn/PacketMonitor).  
+This is a modified version of [Spacehuhn's](https://github.com/spacehuhn) [ESP32 PacketMonitor](https://github.com/spacehuhn/PacketMonitor32) (In turn modified from his [ESP8266 version](https://github.com/spacehuhn/PacketMonitor)), further adapted to work with the Heltec Wifi Lora 32 development board.  
+
 It shows you the traffic of all nearby devices on the selected WiFi channel.  
 
-## What's new
+## What's new with the ESP32 version
 - SD card support to capture traffic
 - better performance due to the powerful ESP32
 - shows average RSSI
 
-## Now Available on
-**Tindie**: https://goo.gl/kZmVug  
-**AliExpress**: https://goo.gl/hCCKMJ  
+## Board Available on
+**[AliExpress](https://www.aliexpress.com/item/2PCS-868MHz-915MHz-SX1276-ESP32-LoRa-0-96-Inch-Blue-OLED-Display-Bluetooth-WIFI-Lora-Kit/32836576437.html)**  
 
 ## Video
 [![PacketMonitor32 Video](https://img.youtube.com/vi/7WYakpagPXk/0.jpg)](https://www.youtube.com/watch?v=7WYakpagPXk)
 
 ## Interface
-[PacketMonitor32 Interface Explaination](https://raw.githubusercontent.com/spacehuhn/PacketMonitor32/master/images/2.jpg)
+[PacketMonitor32 Interface Explaination](https://raw.githubusercontent.com/ensingm2/PacketMonitor32-Heltec_WIFI_LoRa_32/images/2.jpg)
 
-The interface is pretty simple. With clicking the button you change the WiFi channel it's monitoring (1-14).  
+The interface is pretty simple. With clicking the PRG button you change the WiFi channel it's monitoring (1-14).  
 Hold the button for 2 seconds to enable or disable the micro SD card.  
 
 ## Capturing Traffic
-To caputre the WiFi traffic, you need to connect a micro SD card. The faster the card is, the better.  
+To capture the WiFi traffic, you need to connect a micro SD card. The faster the card is, the better.  
 It will not delete any files when you connect it, but I recommend strongly using an empty card to prevent any chance of data loss!  
 **It must be formatted to FAT32!**  
 I recommend formatting it again before using it, just to be sure.  
@@ -43,9 +43,9 @@ Also please be aware that not every packet can be saved all the time! If more pa
 (**0.** Download and install [Arduino](https://www.arduino.cc/en/Main/Software))  
 **1.** Install the Arduino core for the ESP32: https://github.com/espressif/arduino-esp32#installation-instructions  
 **2.** Install this ESP8266/ESP32 OLED library: https://github.com/squix78/esp8266-oled-ssd1306  
-**3.** [Download](https://github.com/spacehuhn/PacketMonitor32/archive/master.zip) and unzip the repository  
+**3.** [Download](https://github.com/ensingm2/PacketMonitor32-Heltec_WIFI_LoRa_32/archive/master.zip) and unzip the repository  
 **4.** Open PacketMonitor32.ino with Arduino  
-**5.** Select ESP32 Dev Module as Board  
+**5.** Select "Heltec_WIFI_LoRa_32" as Board  
 **6.** Connect your board, select the correct COM port and click upload  
 
 If you ran into upload problems, try setting the flash frequency to 40MHz and the upload speed 115200.  
